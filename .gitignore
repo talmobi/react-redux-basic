@@ -1,0 +1,8 @@
+node_modules/
+rethinkdb_data/
+public/bundle.js
+private/
+auth.json
+*.swo
+*.swp
+*.DS_STORE

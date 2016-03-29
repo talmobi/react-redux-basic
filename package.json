@@ -1,0 +1,47 @@
+{
+  "name": "react-redux-basic",
+  "version": "0.0.0",
+  "description": "basic app with react and redux - browserify, livereload, nodemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js",
+    "start": "node index.js",
+    "nodemon": "nodemon -d 3 index.js -i public/ -i node_modules/",
+    "build": "browserify -t [ babelify --presets [ react ] ] public/js/app.js -o public/bundle.js --verbose",
+    "watch": "watchify -t [ babelify --presets [ react ] ] public/js/app.js -o public/bundle.js --verbose",
+    "livereload": "livereloadx --exclude '.*' --include 'bundle.js' --exclude '*.{js,jsx}' public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talmobi/react-redux-basic.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "browserify",
+    "basic",
+    "starter"
+  ],
+  "author": "talmobi <talmo.christian@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/talmobi/react-redux-basic/issues"
+  },
+  "homepage": "https://github.com/talmobi/react-redux-basic#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "redux": "^3.3.1",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "deep-freeze": "0.0.1",
+    "expect": "^1.16.0",
+    "mocha": "^2.4.5",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "reactify": "^1.1.1",
+    "watchify": "^3.7.0"
+  }
+}
